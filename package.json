@@ -1,0 +1,28 @@
+{
+  "name": "angular-jlg-daterangepicker",
+  "version": "0.0.1",
+  "description": "Angular wrapper on dangrossman/bootstrap-daterangepicker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "daterangepicker",
+    "dangrossman"
+  ],
+  "author": "Jean-Louis GUENEGO",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "1.7.9"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlguenego/angular-jlg-daterangepicker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jlguenego/angular-jlg-daterangepicker/issues"
+  },
+  "homepage": "https://github.com/jlguenego/angular-jlg-daterangepicker#readme"
+}

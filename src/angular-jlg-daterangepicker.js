@@ -17,6 +17,7 @@
 				
 				var config = $parse(attr.config)(scope);
 				console.log('config', config);
+				element.daterangepicker();
 			}
 		};
 	}]);

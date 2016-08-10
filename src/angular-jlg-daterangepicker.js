@@ -11,16 +11,38 @@
 				if (attr.type !== 'daterangepicker') {
 					return;
 				}
-				console.log('link daterangepicker');
 				
 				var $parse = $injector.get('$parse');
-
+				
+				var addEvent = function(on) {
+					for (var event in on) {
+						element.on(event, on[event][0]);
+					}	
+				};
+				
+				var removeEvent = function(on) {
+					for (var event in on) {
+						element.off(event);
+					}	
+				};
 				
 				scope.$watch(attr.options, function() {
 					var options = $parse(attr.options)(scope);
-					console.log('options', options);
 					element.daterangepicker(options);
-				});
+					var plugin = element.data('daterangepicker');
+					if (attr.export) {
+						scope[attr.export] = plugin;
+					}
+					var on = $parse(attr.on)(scope);
+					addEvent(on);
+					
+				}, true);
+				
+				scope.$watch(attr.on, function(newValue, oldValue) {
+					removeEvent(oldValue);
+					addEvent(newValue);
+				}, true);
+				
 			}
 		};
 	}]);

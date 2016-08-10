@@ -12,6 +12,18 @@
 			},
 			autoApply: true
 		};
+		
+		$rootScope.eventObject = {};
+		
+		$rootScope.$watch('isEventonShow', function() {
+			if ($rootScope.isEventonShow) {
+				$rootScope.eventObject['show.daterangepicker'] = [function() {
+					console.log('event show.daterangepicker', arguments);
+				}];
+			} else {
+				delete $rootScope.eventObject['show.daterangepicker'];
+			}
+		});
 		$rootScope.model = {};
 		
 		$rootScope.onSubmit = function() {

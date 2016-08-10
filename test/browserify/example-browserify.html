@@ -6,8 +6,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-		<title>Bower test</title>
-		<script src="css.js"></script>
+		<title>Browserify test</title>
+		
+		<script src="bundle.js"></script>
+		
 	</head>
 
 	<body ng-cloak>
@@ -26,16 +28,33 @@
 					<form name="form" ng-submit="onSubmit();">
 						<div class="form-group">
 							<label for="exampleInputEmail1">Date range</label>
-							<input type="daterangepicker" class="form-control" ng-model="model.daterange" options="daterangeOptions" placeholder="Enter a date range"/>
+							<input type="daterangepicker" class="form-control" ng-model="model.daterange" placeholder="Enter a date range"
+								export="myDaterangepicker" options="daterangeOptions"
+								on="eventObject" />
 						</div>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</form>
 					
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" ng-model="daterangeOptions.autoApply"> autoApply
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" ng-model="isEventonShow"> put event on show
+						</label>
+					</div>
+					<h2>model.daterange</h2>
+					<pre>{{model.daterange | json }}</pre>
+					<h2>eventObject</h2>
+					<pre>{{eventObject | json }}</pre>
 				</div>
+				
+				
 		
 			</div>
 		</div>
 	
-		<script src="bundle.js"></script>
 	</body>
 </html>

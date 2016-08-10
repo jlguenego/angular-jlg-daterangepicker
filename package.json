@@ -14,9 +14,24 @@
   "author": "Jean-Louis GUENEGO",
   "license": "ISC",
   "devDependencies": {
-    "bower": "1.7.9"
+    "bower": "1.7.9",
+    "browserify": "13.1.0",
+    "browserify-css": "0.9.1",
+    "gulp": "3.9.1",
+    "gulp-sourcemaps": "1.6.0",
+    "gulp-uglify": "2.0.0",
+    "gulp-util": "3.0.7",
+    "lodash": "4.14.2",
+    "vinyl-buffer": "1.0.0",
+    "vinyl-source-stream": "1.1.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "3.3.7",
+    "bootstrap-daterangepicker": "^2.1.24",
+    "jquery": "^2.2.4",
+    "moment": "^2.14.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jlguenego/angular-jlg-daterangepicker.git"

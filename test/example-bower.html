@@ -1,22 +1,49 @@
 <!DOCTYPE html>
-<html ng-app="mainApp">
+<html ng-app="mainApp" lang="en">
 	<head>
+		
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 		<title>Bower test</title>
 		
-		<link target="vendors" rel="stylesheet" href="../bower_components/angular/angular-csp.css" />
-		<link target="vendors" rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="../bower_components/angular/angular-csp.css" />
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
 		
 	</head>
 
 	<body ng-cloak>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						Angular JLG Daterangepicker
+					</a>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<form name="form" ng-submit="onSubmit();">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Date range</label>
+							<input type="daterangepicker" class="form-control" ng-model="model.daterange" config="daterangeConfig" placeholder="Enter a date range"/>
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					
+				</div>
+				
+		
+			</div>
+		</div>
 	
-		<input type="daterangepicker" ng-model="model.daterange" config="daterangeConfig"/>
+		
 		
 		<script src="../bower_components/jquery/dist/jquery.js"></script>
+		<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
 		<script target="vendors" src="../bower_components/angular/angular.js"></script>
 		<script src="../src/angular-jlg-daterangepicker.js"></script>
 		<script target="app" src="app.js"></script>

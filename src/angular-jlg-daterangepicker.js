@@ -14,11 +14,15 @@
 				console.log('link daterangepicker');
 				
 				var $parse = $injector.get('$parse');
+
 				
-				var config = $parse(attr.config)(scope);
-				console.log('config', config);
-				element.daterangepicker();
+				scope.$watch(attr.options, function() {
+					var options = $parse(attr.options)(scope);
+					console.log('options', options);
+					element.daterangepicker(options);
+				});
 			}
 		};
 	}]);
+
 })();

@@ -6,7 +6,12 @@
 	app.run(['$injector', function($injector) {
 		var $rootScope = $injector.get('$rootScope');
 		
-		$rootScope.daterangeConfig = { a: 123 };
+		$rootScope.daterangeOptions = {
+			locale: {
+				format: 'DD/MM/YYYY'
+			},
+			autoApply: true
+		};
 		$rootScope.model = {};
 		
 		$rootScope.onSubmit = function() {

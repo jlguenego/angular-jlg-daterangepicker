@@ -20,9 +20,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.5.8",
-    "bootstrap": "3.3.7",
-    "bootstrap-daterangepicker": "2.1.24",
-    "jquery": "2.2.4"
+    "angular": ">=1.2",
+    "bootstrap": ">=3",
+    "bootstrap-daterangepicker": ">=2.1.24",
+    "jquery": "1.9.1 - 2"
   }
 }

@@ -10,6 +10,11 @@ var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
 var path = require('path');
 var _ = require('lodash');
+var p = require('./package.json');
+var del = require('del');
+var concat = require('gulp-concat');
+
+var dist = 'dist';
 
 var browserifyCssOpts = {
 	processRelativeUrl: function(relativeUrl) {
@@ -48,4 +53,17 @@ gulp.task('js', function () {
         .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('test/browserify/'));
+});
+
+gulp.task('build', function () {
+	return gulp.src('./src/*.js')
+		.pipe(sourcemaps.init({loadMaps: true}))
+		.pipe(uglify())
+		.pipe(concat(p.name + '.min.js'))
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(dist));
+});
+
+gulp.task('clean', function() {
+	return del(dist);
 });

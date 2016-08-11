@@ -94,15 +94,11 @@ and here is an example of a `app.js` file:
 		
 		$rootScope.eventObject = {};
 		
-		$rootScope.$watch('isEventonShow', function() {
-			if ($rootScope.isEventonShow) {
-				$rootScope.eventObject['show.daterangepicker'] = [function() {
-					console.log('event show.daterangepicker', arguments);
-				}];
-			} else {
-				delete $rootScope.eventObject['show.daterangepicker'];
-			}
-		});
+		
+		$rootScope.eventObject['show.daterangepicker'] = [function() {
+			console.log('event show.daterangepicker', arguments);
+		}];
+			
 		$rootScope.model = {};
 		
 		$rootScope.onSubmit = function() {
@@ -144,15 +140,11 @@ app.run(['$injector', function($injector) {
 	
 	$rootScope.eventObject = {};
 	
-	$rootScope.$watch('isEventonShow', function() {
-		if ($rootScope.isEventonShow) {
-			$rootScope.eventObject['show.daterangepicker'] = [function() {
-				console.log('event show.daterangepicker', arguments);
-			}];
-		} else {
-			delete $rootScope.eventObject['show.daterangepicker'];
-		}
-	});
+	
+	$rootScope.eventObject['show.daterangepicker'] = [function() {
+		console.log('event show.daterangepicker', arguments);
+	}];
+		
 	$rootScope.model = {};
 	
 	$rootScope.onSubmit = function() {

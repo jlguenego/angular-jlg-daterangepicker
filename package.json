@@ -1,6 +1,6 @@
 {
   "name": "angular-jlg-daterangepicker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular wrapper on dangrossman/bootstrap-daterangepicker",
   "main": "index.js",
   "scripts": {
@@ -28,11 +28,9 @@
     "vinyl-source-stream": "1.1.0"
   },
   "dependencies": {
-    "angular": "^1.5.8",
-    "bootstrap": "3.3.7",
-    "bootstrap-daterangepicker": "^2.1.24",
-    "jquery": "^2.2.4",
-    "moment": "^2.14.1"
+    "angular": ">=1.2.14",
+	"bootstrap": ">=3.3.6",
+    "bootstrap-daterangepicker": ">=2.1.24"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,7 @@ Angular directive wrapping the [Dan Grossman daterangepicker jQuery plugin](http
 
 
 The daterangepicker jQuery plugin is simply wrapped:
-- "2 way binding" on the options object so that **all options can be used** and changed at will.
+- "2 way binding" on the `options` object so that **all options can be used** and changed at will.
 - access to a reference on the jQuery plugin object.
 - "2 way binding" on an object **configuring the specific events** of the plugin.
 

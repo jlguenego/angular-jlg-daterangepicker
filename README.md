@@ -1,10 +1,6 @@
 Angular JLG Daterangepicker
 =======================
 
-*Intuitive ! Simple ! Reliable !*
-
-
-
 Angular directive wrapping the [Dan Grossman daterangepicker jQuery plugin](https://github.com/dangrossman/bootstrap-daterangepicker) without loss of functionnalities.
 
 
@@ -217,6 +213,8 @@ Why this module ?
 - The events can also be specified with a "2 way binding" scope object.
 
 In fact, I think most of the jQuery plugin could be wrapped in angular with the adopted design here.
+
+*Intuitive ! Simple ! Reliable !*
 
 Author
 ----------------

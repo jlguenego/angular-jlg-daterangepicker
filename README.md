@@ -1,6 +1,7 @@
 Angular JLG Daterangepicker
 =======================
 ![David-DM](https://david-dm.org/jlguenego/angular-jlg-daterangepicker.svg)
+
 Angular directive wrapping the [Dan Grossman daterangepicker jQuery plugin](https://github.com/dangrossman/bootstrap-daterangepicker) without loss of functionnalities.
 
 

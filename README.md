@@ -223,6 +223,7 @@ ISC
 Want to thanks ?
 --------------------------
 Easy... just star the Github repo! No money needed. Just vanity satisfied... ;)
+
 https://github.com/jlguenego/angular-jlg-daterangepicker
 
 

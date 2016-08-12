@@ -202,7 +202,7 @@ Why this module ?
 -------------------------
 
  - Because I needed an angular directive to this daterangepicker.
- - Because the other angular modules on this daterangepicker did not have the `autoApply` options, and a lot of other options was missing. The options was not dynamically synchronized with the widget.
+ - Because the other angular modules on this daterangepicker did not have the `autoApply` options, and a lot of other options were missing. The options were not dynamically synchronized with the widget.
  - Because I did not want to relearn a new syntax. I wanted to reuse the existing one in the jQuery plugin.
 
 **What this modules bring ?**

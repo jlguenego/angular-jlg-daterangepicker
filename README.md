@@ -1,7 +1,7 @@
 Angular JLG Daterangepicker
 =======================
 
-> *Intuitive ! Simple ! Reliable !*
+*Intuitive ! Simple ! Reliable !*
 
 
 

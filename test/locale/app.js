@@ -10,9 +10,9 @@
 
 	app.run(['$injector', function($injector) {
 		var $rootScope = $injector.get('$rootScope');
-		
 		var $locale = $injector.get('$locale');
-		
+		var $filter = $injector.get('$filter');
+		var i18n = $filter('i18n');
 		var jlgI18nService = $injector.get('jlgI18nService');
 		
 		$rootScope.changeLocale = jlgI18nService.changeLocale;
@@ -23,47 +23,30 @@
 			autoApply: true
 		};
 		
-		$rootScope.$watch('jlgI18nService.translation', function() {
-			var $filter = $injector.get('$filter');
-			var i18n = $filter('i18n');
+		var refresh = function() {
+			
 			console.log('i18n(Apply)', i18n('Apply'));
 			console.log('locale', $locale);
+			console.log('months', $locale.DATETIME_FORMATS.MONTH);
+			var format = $locale.DATETIME_FORMATS.shortDate.replace(/(y+)/g, 'YYYY').replace(/(d+)/g, 'DD').replace(/(M+)/g, 'MM');
+			console.log('format', format);
 			$rootScope.daterangeOptions.locale = {
-				format: 'MM/DD/YYYY',
+				format: format,
 				separator: ' - ',
 				applyLabel: i18n('Apply'),
 				cancelLabel: i18n('Cancel'),
-				fromLabel: 'From',
-				toLabel: 'To',
-				customRangeLabel: 'Custom',
-				weekLabel: 'W',
-				daysOfWeek: [
-					'Su',
-					'Mo',
-					'Tu',
-					'We',
-					'Th',
-					'Fr',
-					'Sa'
-				],
-				monthNames: [
-				'January',
-				'February',
-				'March',
-				'April',
-				'May',
-				'June',
-				'July',
-				'August',
-				'September',
-				'October',
-				'November',
-				'December'
-				],
+				fromLabel: i18n('From'),
+				toLabel: i18n('To'),
+				customRangeLabel: i18n('Custom'),
+				weekLabel: i18n('W'),
+				daysOfWeek: $locale.DATETIME_FORMATS.SHORTDAY.map(function(n) { return n.substring(0, 2); }),
+				monthNames: $locale.DATETIME_FORMATS.MONTH,
 				firstDay: 1
 			};
-		}, true);
+		};
 		
+		$rootScope.$watch('jlgI18nService.translation', refresh, true);
+		$rootScope.$watch('locale', refresh, true);
 		
 		
 		$rootScope.eventObject = {};

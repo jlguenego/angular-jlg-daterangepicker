@@ -1,9 +1,11 @@
 Angular JLG Daterangepicker
 =======================
-![David-DM](https://david-dm.org/jlguenego/angular-jlg-daterangepicker.svg)
+[![David-DM](https://david-dm.org/jlguenego/angular-jlg-daterangepicker.svg)](https://david-dm.org/jlguenego/angular-jlg-daterangepicker)
+
 
 Angular directive wrapping the [Dan Grossman daterangepicker jQuery plugin](https://github.com/dangrossman/bootstrap-daterangepicker) without loss of functionnalities.
 
+Access to the **[DEMO](https://jlguenego.github.io/angular-jlg-daterangepicker/)**.
 
 The daterangepicker jQuery plugin is simply wrapped:
 - "2 way binding" on the `options` object so that **all options can be used** and changed at will.

@@ -4,7 +4,6 @@
   "description": "Angular wrapper on dangrossman/bootstrap-daterangepicker",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install"
   },
   "keywords": [
     "angular",
